@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Dodgy Dave's Stock Predictions</title>
-		<link rel="stylesheet" href="index.css">
+		<script src="https://cdn.tailwindcss.com"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -10,38 +10,38 @@
 		<meta charset="UTF-8">
 	</head>
 
-	<body>
-		<header>
-			<img src="images/logo-dave-text.png" alt="Dodgy Dave's Stock Predictions">
+	<body class="m-0 p-0 font-['Poppins',sans-serif] bg-[#f6f6f6]">
+		<header class="flex justify-center p-4 bg-black mx-auto my-0">
+			<img src="images/logo-dave-text.png" alt="Dodgy Dave's Stock Predictions" class="w-[340px]">
 		</header>
-		<main>
-			<section class="action-panel">
-				<form id="ticker-input-form">
-					<label for="ticker-input"> Add up to 3 stock tickers below to get a super accurate stock predictions report👇 </label>
-					<div class="form-input-control">
-						<input type="text" id="ticker-input" placeholder="MSFT">
-						<button class="add-ticker-btn">
-							<img src="images/add.svg" class="add-ticker-svg" alt="add"> 
+		<main class="flex justify-center">
+			<section class="action-panel leading-[1.4em] flex h-[350px] flex-col justify-around items-center my-[1.5em] mx-[2em]">
+				<form id="ticker-input-form" class="w-[360px] flex flex-col items-center">
+					<label for="ticker-input" class="text-center p-[0.43em] text-[15px] mb-[1em] w-[80%]"> Add up to 3 stock tickers below to get a super accurate stock predictions report👇 </label>
+					<div class="form-input-control flex w-[70%]">
+						<input type="text" id="ticker-input" placeholder="MSFT" class="p-[1em] border-2 border-black border-r-0">
+						<button class="add-ticker-btn flex items-center bg-white text-[3em] py-0 px-[0.35em] cursor-pointer border-2 border-black hover:bg-[#d2d2d2]">
+							<img src="images/add.svg" class="add-ticker-svg w-[14px]" alt="add"> 
 						</button>
 					</div>
 				</form>
-				<p class="ticker-choice-display">
+				<p class="ticker-choice-display flex items-center h-[3em]">
 					Your tickers will appear here...
 				</p>
-				<button class="generate-report-btn" type="button" disabled>
+				<button class="generate-report-btn w-[70%] py-[1em] px-[1.5em] cursor-pointer font-['Poppins',sans-serif] border-2 border-black bg-[#46ff90] uppercase font-medium tracking-[0.09em] text-[105%]" type="button" disabled>
 					Generate Report
 				</button>
-				<p class="tag-line">Always correct 15% of the time!</p>
+				<p class="tag-line font-['Comic_Neue'] font-bold text-[14px]">Always correct 15% of the time!</p>
 			</section>
-			<section class="loading-panel">
+			<section class="loading-panel hidden flex-col justify-around h-[400px] text-center">
 				<img src="images/loader.svg" alt="loading">
 				<div id="api-message">Querying Stocks API...</div>
 			</section>
-			<section class="output-panel">
-				<h2>Your Report 😜</h2>
+			<section class="output-panel leading-[1.4em] hidden flex-col justify-start items-center my-[1.5em] mx-[2em] h-[350px] border-2 border-solid border-black py-[1em] px-[2em]">
+				<h2 class="text-center font-normal -mt-[26px] bg-[#f6f6f6] px-[10px] py-0 text-[18px] mb-0">Your Report 😜</h2>
 			</section>
 		</main>
-		<footer>
+		<footer class="text-[14px] text-center">
 			&copy; This is not real financial advice!
 		</footer>
 		<script src="index.js" type="module"></script>
