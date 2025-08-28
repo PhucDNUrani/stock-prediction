@@ -77,7 +77,7 @@ async function fetchReport(data) {
     ]
     
     try {
-        const url = 'https://openai-api-vercel-two.vercel.app/api/openai'
+        const url = 'https://openai-api-request.vercel.app/api/openai'
         
         const response = await fetch(url, {
             method: 'POST',
